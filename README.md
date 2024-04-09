@@ -1,7 +1,8 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Джемал Маранели](https://up.htmlacademy.ru/adaptive/31/user/2424041).
-* Наставник: `Неизвестно`.
+* Наставник: [Иван Жарков](https://htmlacademy.ru/profile/id191422).
+* Сайт проекта: [Cat Energy](https://dzhemal-maraneli.github.io/2424041-cat-energy-31/).
 
 ---
 
