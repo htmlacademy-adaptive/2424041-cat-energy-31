@@ -1,0 +1,26 @@
+.additional__item-title {
+  font-size: 16px;
+  line-height: 16px;
+  color: $grey-text-second-color;
+  font-weight: 400;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.additional__quantity,
+.additional__price {
+  line-height: 14px;
+  color: $grey-text-color;
+
+  @media (min-width: 768px) {
+    line-height: 20px;
+  }
+}
+
+.additional__link {
+  display: block;
+  text-decoration: none;
+}

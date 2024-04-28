@@ -1,0 +1,43 @@
+.example {
+  background: linear-gradient(to top, $special-grey-third-color 100%, $white-color 0%);
+
+  @media (min-width: 768px) {
+    background: linear-gradient(to top, $special-grey-third-color 42%, $white-color 42%);
+  }
+
+  @media (min-width: 1440px) {
+    background: linear-gradient(to top, $special-grey-third-color 77%, $white-color 77%);
+  }
+}
+
+.example__stat-count {
+  font-size: 24px;
+  line-height: 24px;
+
+  @media (min-width: 768px) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.example__stat-text {
+  font-size: 12px;
+  line-height: 12px;
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.example__cost-text,
+.example__cost-price {
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

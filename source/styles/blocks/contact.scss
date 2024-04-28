@@ -1,0 +1,20 @@
+.contact__content {
+  background-color: $white-color;
+}
+
+.contact__title {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.contact__street,
+.contact__city {
+  line-height: 20px;
+}

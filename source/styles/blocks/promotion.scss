@@ -1,0 +1,11 @@
+.promotion {
+  text-align: center;
+  background-color: rgba($basic-green-color, 0.85);
+}
+
+.promotion__text {
+  font-family: $second-font-lato;
+  font-size: 16px;
+  line-height: 20px;
+  color: $white-color;
+}
