@@ -1,10 +1,10 @@
 .additional__item-title {
   font-size: 16px;
   line-height: 16px;
-  color: $grey-text-second-color;
   font-weight: 400;
+  color: $grey-text-second-color;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
   }
@@ -15,7 +15,7 @@
   line-height: 14px;
   color: $grey-text-color;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     line-height: 20px;
   }
 }

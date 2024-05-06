@@ -1,11 +1,10 @@
 .button {
-  border: none;
-  cursor: pointer;
-
+  padding: 10px;
   font-size: 16px;
   line-height: 20px;
+  text-align: center;
   color: $white-color;
   background-color: $basic-green-color;
-  padding: 10px;
-  text-align: center;
+  border: none;
+  cursor: pointer;
 }

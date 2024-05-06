@@ -33,25 +33,25 @@
     position: absolute;
     width: 24px;
     height: 2px;
-    background-color: $dark-color;
     left: 50%;
     top: 8px;
+    background-color: $dark-color;
     transform: translateX(-50%);
   }
 }
 
 .nav__link {
-  text-decoration: none;
   font-size: 20px;
   line-height: 20px;
   color: $dark-color;
+  text-decoration: none;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 18px;
     line-height: 24px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 20px;
     color: $white-color;
