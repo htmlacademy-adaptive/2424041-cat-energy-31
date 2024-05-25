@@ -1,21 +1,32 @@
 .social {
-  margin: 0;
-  padding: 20px 0;
-  list-style: none;
-
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 24px;
+  width: 100%;
+
+  margin: 0;
+  padding: 20px 0;
+  list-style: none;
 
   border-top: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 0 34px;
+    width: auto;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 8px 0 7px 34px;
+  }
 }
 
 .social__link {
+  display: block;
   width: 28px;
   height: 22px;
-  display: block;
 
   &--vk::before {
     content: "";

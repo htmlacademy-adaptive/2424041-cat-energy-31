@@ -1,14 +1,59 @@
 .second-title {
+  position: relative;
+  display: inline-block;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
 
+  &::before {
+    content: "";
+    position: absolute;
+    left: calc(100% + 40px);
+    top: 9px;
+
+    width: 100vw;
+    height: 2px;
+    background-color: $basic-green-color;
+
+    @media (min-width: $tablet-width) {
+      top: 14px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 18px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 9px;
+    display: none;
+
+    width: 100vw;
+    height: 2px;
+    background-color: $basic-green-color;
+
+    @media (min-width: $tablet-width) {
+      top: 14px;
+      display: block;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 18px;
+      right: calc(100% + 40px);
+    }
+  }
+
   @media (min-width: $tablet-width) {
+    padding-left: 40px;
     font-size: 32px;
     line-height: 32px;
   }
 
   @media (min-width: $desktop-width) {
+    padding-left: 0;
     font-size: 40px;
     line-height: 40px;
   }

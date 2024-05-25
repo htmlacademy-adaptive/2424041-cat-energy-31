@@ -1,3 +1,42 @@
+.header {
+  position: relative;
+  padding: 13px 0 15px;
+
+  @media (min-width: $tablet-width) {
+    padding: 25px 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 55px 0 0;
+  }
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .header__logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 13px;
+  min-width: 190px;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-start;
+  }
+}
+
+.header__logo-img {
+  display: block;
+}
+
+.header__logo-text {
+  @media (min-width: $desktop-width) {
+    width: 118px;
+    height: 21px;
+  }
 }

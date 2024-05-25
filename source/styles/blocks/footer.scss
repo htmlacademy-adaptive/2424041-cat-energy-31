@@ -1,15 +1,30 @@
 .footer {
   padding: 40px 0;
   background-color: $basic-grey-color;
+
+  @media (min-width: $tablet-width) {
+    padding: 55px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 66px 0;
+  }
 }
 
 .footer__container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  align-items: center;
+  gap: 18px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .footer__logo {
+  height: 24px;
   align-self: center;
 }
 
@@ -18,6 +33,8 @@
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
+  width: 100%;
+  max-width: 320px;
 
   &::after {
     content: "";
@@ -27,6 +44,11 @@
     mask-repeat: no-repeat;
     mask-size: cover;
     background-color: $icons-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    gap: 23px;
+    width: auto;
   }
 }
 

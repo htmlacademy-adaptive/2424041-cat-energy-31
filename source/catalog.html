@@ -18,7 +18,7 @@
 
 <body class="page__body">
   <header class="header">
-    <div class="container">
+    <div class="header__container container">
       <a class="header__logo" href="index.html">
         <picture>
           <source media="(min-width: 1440px)" width="70" height="59" type="image/svg+xml"
@@ -32,7 +32,7 @@
           alt="Словесный логотип сайта Cat Enegry.">
       </a>
 
-      <nav class="nav">
+      <nav class="nav nav--opened">
         <button class="nav__burger" type="button">
           <span class="visually-hidden">Открыть меню</span>
           <span class="nav__burger-line"></span>
@@ -57,24 +57,24 @@
     <section class="catalog">
       <div class="container">
         <h2 class="catalog__title main-title">Каталог продукции</h2>
+      </div>
+      <div class="catalog__list-container container">
         <ul class="catalog__list">
           <li class="catalog__item">
             <article class="product-card">
-              <div class="product-card__img-wrapper">
-                <a class="product-card__link" href="#">
-                  <picture>
-                    <source media="(min-width: 768px)" width="161" height="172" type="image/png"
-                      srcset="images/catalog-items/chicken-500-tablet-desktop@1x.png 1x, images/catalog-items/chicken-500-tablet-desktop@2x.png 2x">
-                    <img class="product-card__img" src="images/catalog-items/chicken-500-mobile@1x.png"
-                      srcset="images/catalog-items/chicken-500-mobile@2x.png 2x" width="68" height="78"
-                      alt="Изображение товара Cat Energy PRO 500 грамм.">
-                  </picture>
-                </a>
-              </div>
+              <a class="product-card__img-wrapper" href="#">
+                <picture>
+                  <source media="(min-width: 768px)" width="161" height="172" type="image/png"
+                    srcset="images/catalog-items/chicken-500-tablet-desktop@1x.png 1x, images/catalog-items/chicken-500-tablet-desktop@2x.png 2x">
+                  <img class="product-card__img" src="images/catalog-items/chicken-500-mobile@1x.png"
+                    srcset="images/catalog-items/chicken-500-mobile@2x.png 2x" width="68" height="78"
+                    alt="Изображение товара Cat Energy PRO 500 грамм.">
+                </picture>
+              </a>
               <a class="product-card__link" href="#">
                 <h3 class="product-card__title">
                   Cat Energy PRO
-                  <span class="product-card__weight">500 г</span>
+                  <span class="product-card__weight">500&nbsp;г</span>
                 </h3>
               </a>
               <ul class="product-card__properties">
@@ -94,24 +94,21 @@
               <a class="product-card__order-link button" href="#">Заказать</a>
             </article>
           </li>
-
           <li class="catalog__item">
             <article class="product-card">
-              <div class="product-card__img-wrapper">
-                <a class="product-card__link" href="#">
-                  <picture>
-                    <source media="(min-width: 768px)" width="168" height="206" type="image/png"
-                      srcset="images/catalog-items/chicken-1000-tablet-desktop@1x.png 1x, images/catalog-items/chicken-1000-tablet-desktop@2x.png 2x">
-                    <img class="product-card__img" src="images/catalog-items/chicken-1000-mobile@1x.png"
-                      srcset="images/catalog-items/chicken-1000-mobile@2x.png 2x" width="84" height="100"
-                      alt="Изображение товара Cat Energy PRO 1000 грамм.">
-                  </picture>
-                </a>
-              </div>
+              <a class="product-card__img-wrapper" href="#">
+                <picture>
+                  <source media="(min-width: 768px)" width="168" height="206" type="image/png"
+                    srcset="images/catalog-items/chicken-1000-tablet-desktop@1x.png 1x, images/catalog-items/chicken-1000-tablet-desktop@2x.png 2x">
+                  <img class="product-card__img product-card__img--size-big" src="images/catalog-items/chicken-1000-mobile@1x.png"
+                    srcset="images/catalog-items/chicken-1000-mobile@2x.png 2x" width="84" height="100"
+                    alt="Изображение товара Cat Energy PRO 1000 грамм.">
+                </picture>
+              </a>
               <a class="product-card__link" href="#">
                 <h3 class="product-card__title">
                   Cat Energy PRO
-                  <span class="product-card__weight">1000 г</span>
+                  <span class="product-card__weight">1000&nbsp;г</span>
                 </h3>
               </a>
               <ul class="product-card__properties">
@@ -131,24 +128,21 @@
               <a class="product-card__order-link button" href="#">Заказать</a>
             </article>
           </li>
-
           <li class="catalog__item">
             <article class="product-card">
-              <div class="product-card__img-wrapper">
-                <a class="product-card__link" href="#">
-                  <picture>
-                    <source media="(min-width: 768px)" width="163" height="174" type="image/png"
-                      srcset="images/catalog-items/fish-500-tablet-desktop@1x.png 1x, images/catalog-items/fish-500-tablet-desktop@2x.png 2x">
-                    <img class="product-card__img" src="images/catalog-items/fish-500-mobile@1x.png"
-                      srcset="images/catalog-items/fish-500-mobile@2x.png 2x" width="68" height="78"
-                      alt="Изображение товара Cat Energy PRO 500 грамм.">
-                  </picture>
-                </a>
-              </div>
+              <a class="product-card__img-wrapper" href="#">
+                <picture>
+                  <source media="(min-width: 768px)" width="163" height="174" type="image/png"
+                    srcset="images/catalog-items/fish-500-tablet-desktop@1x.png 1x, images/catalog-items/fish-500-tablet-desktop@2x.png 2x">
+                  <img class="product-card__img" src="images/catalog-items/fish-500-mobile@1x.png"
+                    srcset="images/catalog-items/fish-500-mobile@2x.png 2x" width="68" height="78"
+                    alt="Изображение товара Cat Energy PRO 500 грамм.">
+                </picture>
+              </a>
               <a class="product-card__link" href="#">
                 <h3 class="product-card__title">
                   Cat Energy PRO
-                  <span class="product-card__weight">500 г</span>
+                  <span class="product-card__weight">500&nbsp;г</span>
                 </h3>
               </a>
               <ul class="product-card__properties">
@@ -168,24 +162,21 @@
               <a class="product-card__order-link button" href="#">Заказать</a>
             </article>
           </li>
-
           <li class="catalog__item">
             <article class="product-card">
-              <div class="product-card__img-wrapper">
-                <a class="product-card__link" href="#">
-                  <picture>
-                    <source media="(min-width: 768px)" width="168" height="200" type="image/png"
-                      srcset="images/catalog-items/fish-1000-tablet-desktop@1x.png 1x, images/catalog-items/fish-1000-tablet-desktop@2x.png 2x">
-                    <img class="product-card__img" src="images/catalog-items/fish-1000-mobile@1x.png"
-                      srcset="images/catalog-items/fish-1000-mobile@2x.png 2x" width="84" height="100"
-                      alt="Изображение товара Cat Energy PRO 1000 грамм.">
-                  </picture>
-                </a>
-              </div>
+              <a class="product-card__img-wrapper" href="#">
+                <picture>
+                  <source media="(min-width: 768px)" width="168" height="200" type="image/png"
+                    srcset="images/catalog-items/fish-1000-tablet-desktop@1x.png 1x, images/catalog-items/fish-1000-tablet-desktop@2x.png 2x">
+                  <img class="product-card__img product-card__img--size-big" src="images/catalog-items/fish-1000-mobile@1x.png"
+                    srcset="images/catalog-items/fish-1000-mobile@2x.png 2x" width="84" height="100"
+                    alt="Изображение товара Cat Energy PRO 1000 грамм.">
+                </picture>
+              </a>
               <a class="product-card__link" href="#">
                 <h3 class="product-card__title">
                   Cat Energy PRO
-                  <span class="product-card__weight">1000 г</span>
+                  <span class="product-card__weight">1000&nbsp;г</span>
                 </h3>
               </a>
               <ul class="product-card__properties">
@@ -205,24 +196,21 @@
               <a class="product-card__order-link button" href="#">Заказать</a>
             </article>
           </li>
-
           <li class="catalog__item">
             <article class="product-card">
-              <div class="product-card__img-wrapper">
-                <a class="product-card__link" href="#">
-                  <picture>
-                    <source media="(min-width: 768px)" width="161" height="171" type="image/png"
-                      srcset="images/catalog-items/buckwheat-500-tablet-desktop@1x.png 1x, images/catalog-items/buckwheat-500-tablet-desktop@2x.png 2x">
-                    <img class="product-card__img" src="images/catalog-items/buckwheat-500-mobile@1x.png"
-                      srcset="images/catalog-items/buckwheat-500-mobile@2x.png 2x" width="68" height="78"
-                      alt="Изображение товара Cat Energy PRO 500 грамм.">
-                  </picture>
-                </a>
-              </div>
+              <a class="product-card__img-wrapper" href="#">
+                <picture>
+                  <source media="(min-width: 768px)" width="161" height="171" type="image/png"
+                    srcset="images/catalog-items/buckwheat-500-tablet-desktop@1x.png 1x, images/catalog-items/buckwheat-500-tablet-desktop@2x.png 2x">
+                  <img class="product-card__img" src="images/catalog-items/buckwheat-500-mobile@1x.png"
+                    srcset="images/catalog-items/buckwheat-500-mobile@2x.png 2x" width="68" height="78"
+                    alt="Изображение товара Cat Energy PRO 500 грамм.">
+                </picture>
+              </a>
               <a class="product-card__link" href="#">
                 <h3 class="product-card__title">
-                  Cat Energy PRO
-                  <span class="product-card__weight">500 г</span>
+                  Cat Energy Slim
+                  <span class="product-card__weight">500&nbsp;г</span>
                 </h3>
               </a>
               <ul class="product-card__properties">
@@ -242,24 +230,23 @@
               <a class="product-card__order-link button" href="#">Заказать</a>
             </article>
           </li>
-
           <li class="catalog__item">
             <article class="product-card">
-              <div class="product-card__img-wrapper">
-                <a class="product-card__link" href="#">
-                  <picture>
-                    <source media="(min-width: 768px)" width="168" height="200" type="image/png"
-                      srcset="images/catalog-items/buckwheat-1000-tablet-desktop@1x.png 1x, images/catalog-items/buckwheat-1000-tablet-desktop@2x.png 2x">
-                    <img class="product-card__img" src="images/catalog-items/buckwheat-1000-mobile@1x.png"
-                      srcset="images/catalog-items/buckwheat-1000-mobile@2x.png 2x" width="84" height="100"
-                      alt="Изображение товара Cat Energy PRO 1000 грамм.">
-                  </picture>
-                </a>
-              </div>
-              <h3 class="product-card__title">
-                Cat Energy PRO
-                <span class="product-card__weight">1000 г</span>
-              </h3>
+              <a class="product-card__img-wrapper" href="#">
+                <picture>
+                  <source media="(min-width: 768px)" width="168" height="200" type="image/png"
+                    srcset="images/catalog-items/buckwheat-1000-tablet-desktop@1x.png 1x, images/catalog-items/buckwheat-1000-tablet-desktop@2x.png 2x">
+                  <img class="product-card__img product-card__img--size-big" src="images/catalog-items/buckwheat-1000-mobile@1x.png"
+                    srcset="images/catalog-items/buckwheat-1000-mobile@2x.png 2x" width="84" height="100"
+                    alt="Изображение товара Cat Energy PRO 1000 грамм.">
+                </picture>
+              </a>
+              <a class="product-card__link" href="#">
+                <h3 class="product-card__title">
+                  Cat Energy Slim
+                  <span class="product-card__weight">1000&nbsp;г</span>
+                </h3>
+              </a>
               <ul class="product-card__properties">
                 <li class="product-card__properties-item">
                   <span class="product-card__properties-name">Масса</span>
@@ -277,24 +264,21 @@
               <a class="product-card__order-link button" href="#">Заказать</a>
             </article>
           </li>
-
           <li class="catalog__item">
             <article class="product-card">
-              <div class="product-card__img-wrapper">
-                <a class="product-card__link" href="#">
-                  <picture>
-                    <source media="(min-width: 768px)" width="163" height="174" type="image/png"
-                      srcset="images/catalog-items/rice-500-tablet-desktop@1x.png 1x, images/catalog-items/rice-500-tablet-desktop@2x.png 2x">
-                    <img class="product-card__img" src="images/catalog-items/rice-500-mobile@1x.png"
-                      srcset="images/catalog-items/rice-500-mobile@2x.png 2x" width="68" height="78"
-                      alt="Изображение товара Cat Energy PRO 500 грамм.">
-                  </picture>
-                </a>
-              </div>
+              <a class="product-card__img-wrapper" href="#">
+                <picture>
+                  <source media="(min-width: 768px)" width="163" height="174" type="image/png"
+                    srcset="images/catalog-items/rice-500-tablet-desktop@1x.png 1x, images/catalog-items/rice-500-tablet-desktop@2x.png 2x">
+                  <img class="product-card__img" src="images/catalog-items/rice-500-mobile@1x.png"
+                    srcset="images/catalog-items/rice-500-mobile@2x.png 2x" width="68" height="78"
+                    alt="Изображение товара Cat Energy PRO 500 грамм.">
+                </picture>
+              </a>
               <a class="product-card__link" href="#">
                 <h3 class="product-card__title">
-                  Cat Energy PRO
-                  <span class="product-card__weight">500 г</span>
+                  Cat Energy Slim
+                  <span class="product-card__weight">500&nbsp;г</span>
                 </h3>
               </a>
               <ul class="product-card__properties">
@@ -314,13 +298,12 @@
               <a class="product-card__order-link button" href="#">Заказать</a>
             </article>
           </li>
-
-          <li class="catalog__item">
+          <li class="catalog__item catalog__item--show-more">
             <article class="product-card product-card--show-more">
-              <h3 class="product-card__title">
+              <h3 class="product-card__title product-card__title--show-more">
                 Показать еще 100500 товаров
               </h3>
-              <p class="product-card__text">
+              <p class="product-card__show-more-text">
                 На самом деле вкусов гораздо больше!
               </p>
               <a class="product-card__order-link product-card__order-link--show-more button" href="#">Показать все</a>
@@ -372,7 +355,7 @@
           <div class="promotion">
             <p class="promotion__text">
               Закажите все
-              и получите чехол для
+              и&nbsp;получите чехол для
               кота в подарок!
             </p>
           </div>
@@ -398,22 +381,24 @@
     </section>
 
     <section class="contact">
-      <h2 class="visually-hidden">Наш адрес</h2>
-      <div class="contact__content">
-        <span class="contact__text main-text">
-          Приглашаем
-          к сотрудничеству
-          дилеров!
-        </span>
-        <address class="contact__address">
-          <p class="contact__street">
-            ул. Большая
-            Конюшенная, д. 19/8
-          </p>
-          <p class="contact__city">
-            Санкт-Петербург
-          </p>
-        </address>
+      <div class="contact__container container">
+        <h2 class="visually-hidden">Наш адрес</h2>
+        <div class="contact__content">
+          <h3 class="contact__title">
+            Приглашаем
+            к&nbsp;сотрудничеству
+            дилеров!
+          </h3>
+          <address class="contact__address">
+            <p class="contact__street main-text">
+              ул. Большая
+              Конюшенная, д. 19/8
+            </p>
+            <p class="contact__city main-text">
+              Санкт-Петербург
+            </p>
+          </address>
+        </div>
       </div>
       <div class="contact__map-wrapper"></div>
     </section>
@@ -430,18 +415,20 @@
 
       <ul class="social">
         <li class="social__item">
-          <a class="social__link social__link--vk" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
+          <a class="social__link social__link--vk" href="https://vk.com/htmlacademy" target="_blank"
+            rel="noreferrer noopener">
             <span class="visually-hidden">Перейти в нашу группу во вконтакте.</span>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank"
-            rel="noreferrer noopener">
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru"
+            target="_blank" rel="noreferrer noopener">
             <span class="visually-hidden">Перейти на наш ютуб-канал.</span>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy" target="_blank" rel="noreferrer noopener">
+          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy" target="_blank"
+            rel="noreferrer noopener">
             <span class="visually-hidden">Перейти в наш телеграмм.</span>
           </a>
         </li>

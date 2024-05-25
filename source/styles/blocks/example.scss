@@ -1,18 +1,126 @@
 .example {
+  padding: 25px 0 40px;
   background: $special-grey-third-color;
 
   @media (min-width: $tablet-width) {
-    background: linear-gradient(to top, $special-grey-third-color 42%, $white-color 42%);
+    padding: 45px 0 100px;
+    background: linear-gradient(to top, $special-grey-third-color 462px, $white-color 462px);
   }
 
   @media (min-width: $desktop-width) {
-    background: linear-gradient(to top, $special-grey-third-color 77%, $white-color 77%);
+    padding: 0 0 70px;
   }
 }
 
-.example__stat-count {
+.example__container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    gap: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.example__content {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    max-width: 432px;
+  }
+}
+
+.example__title {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  margin: 0;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 146px;
+  }
+}
+
+.example__text {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+  margin: 0;
+  margin-bottom: 18px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+  }
+}
+
+.example__list {
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 32px;
+  margin: 0;
+  margin-bottom: 29px;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / 3;
+    gap: 43px;
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 52px;
+  }
+}
+
+.example__item {
+  position: relative;
+  justify-self: center;
+  padding: 15px;
+  width: 100%;
+  max-width: 124px;
+  text-align: center;
+  border: 1px solid $special-grey-first-color;
+  border-radius: 3px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 3px;
+    padding: 14px 15px 20px;
+    max-width: 162px;
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.example__item-count {
   font-size: 24px;
   line-height: 24px;
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
@@ -20,13 +128,28 @@
   }
 }
 
-.example__stat-text {
+.example__item-text {
+  position: absolute;
+  top: calc(100% - 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 87px;
+  height: 30px;
+  padding: 0 5px;
+  background-color: $special-grey-third-color;
   font-size: 12px;
   line-height: 12px;
 
   @media (min-width: $tablet-width) {
+    max-width: 142px;
     font-size: 14px;
     line-height: 14px;
+    background-color: $white-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $special-grey-third-color;
   }
 }
 
@@ -42,21 +165,79 @@
   }
 }
 
-.example__result {
-  position: relative;
-  z-index: 1;
+.example__row {
+  grid-column: 1 / -1;
+  grid-row: 4 / 5;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    place-self: center end;
+    margin-bottom: 0;
+    max-width: 200px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+    place-self: start;
+    display: flex;
+    align-items: center;
+    gap: 63px;
+    max-width: 100%;
+  }
 }
 
-.example__result-slider {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.example__result {
+  --curtain-place: 0.5;
+  position: relative;
+  grid-column: 1 / -1;
+  grid-row: 5 / 6;
+  display: grid;
+  grid-template-columns: calc(var(--curtain-place) * 100%) auto calc((1 - var(--curtain-place)) * 100%);
+  margin: 0 auto;
+  width: min(100%, 560px);
+  aspect-ratio: 280/256;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+    margin: 0;
+  }
+
+  picture,
+  source {
+    display: contents;
+  }
+}
+
+.example__result-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  &--before {
+    object-position: left;
+  }
+
+  &--after {
+    object-position: right;
+  }
+}
+
+.example__result-divider {
+  align-self: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: -20px;
+  padding: 0;
   width: 40px;
   height: 40px;
-  padding: 0;
+  z-index: 1;
   border: 2px solid $icons-color;
   cursor: pointer;
   border-radius: 50%;
@@ -67,7 +248,7 @@
     position: absolute;
     z-index: -1;
     width: 4px;
-    height: 256px;
+    height: 100%;
     background-color: $icons-color;
     border-radius: 2px;
   }
