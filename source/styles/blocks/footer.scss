@@ -1,5 +1,7 @@
 .footer {
+  flex-shrink: 0;
   padding: 40px 0;
+
   background-color: $basic-grey-color;
 
   @media (min-width: $tablet-width) {
@@ -26,29 +28,64 @@
 .footer__logo {
   height: 24px;
   align-self: center;
+
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .footer__academy-logo {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-decoration: none;
   width: 100%;
   max-width: 320px;
+
+  transition: opacity 0.3s;
+
+  @media (min-width: $tablet-width) {
+    gap: 23px;
+    width: auto;
+  }
+
+  &:hover {
+    &::after {
+      background-color: $basic-green-color;
+    }
+  }
+
+  &:focus {
+    &::after {
+      background-color: $basic-green-color;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &::after {
     content: "";
     width: 27px;
     height: 34px;
+    flex-shrink: 0;
+
     mask-image: url("../../icons/stack.svg#html-academy-logo");
     mask-repeat: no-repeat;
     mask-size: cover;
     background-color: $icons-color;
-  }
 
-  @media (min-width: $tablet-width) {
-    gap: 23px;
-    width: auto;
+    transition: background-color 0.3s;
   }
 }
 

@@ -1,10 +1,29 @@
 .button {
   padding: 10px;
+
   font-size: 16px;
   line-height: 20px;
   text-align: center;
   color: $white-color;
+
   background-color: $basic-green-color;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: $hover-green-color;
+  }
+
+  &:focus {
+    background-color: $hover-green-color;
+  }
+
+  &:active {
+    color: rgba($white-color, 0.3);
+  }
+
+  &:disabled {
+    background-color: $basic-grey-color;
+  }
 }

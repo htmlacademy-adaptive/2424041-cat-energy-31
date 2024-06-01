@@ -24,6 +24,7 @@
   margin: 0;
   margin-bottom: 35px;
   padding: 0;
+
   list-style: none;
 
   @media (min-width: $tablet-width) {
@@ -38,11 +39,11 @@
 
 .additional__item {
   padding: 12px 0 19px;
+
   border-top: 1px solid $basic-grey-color;
 
   @media (min-width: $tablet-width) {
     padding: 26px 38px 28px;
-
     display: grid;
     grid-template-columns: 1fr max-content;
     gap: 24px 20px;
@@ -53,7 +54,6 @@
 
   @media (min-width: $desktop-width) {
     padding: 15px 0;
-
     grid-template-columns: 1fr 1fr max-content;
     column-gap: 40px;
     align-items: center;
@@ -70,6 +70,7 @@
 .additional__item-title {
   margin: 0;
   margin-bottom: 13px;
+
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
@@ -78,6 +79,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
+
     font-size: 20px;
     line-height: 20px;
   }
@@ -108,7 +110,7 @@
 .additional__link {
   display: block;
   grid-column: 1 / -1;
-  text-decoration: none;
+
   text-transform: uppercase;
 
   @media (min-width: $desktop-width) {

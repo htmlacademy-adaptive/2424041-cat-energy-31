@@ -1,5 +1,17 @@
 .contact__container {
   position: relative;
+
+  &--darker-bg {
+    background-color: $basic-grey-color;
+
+    @media (min-width: $desktop-width) {
+      background-color: $white-color;
+    }
+
+    .contact__content {
+      background-color: inherit;
+    }
+  }
 }
 
 .contact__content {
@@ -7,6 +19,7 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 5px;
   padding: 26px 0;
+
   background-color: $white-color;
 
   @media (min-width: $tablet-width) {
@@ -19,6 +32,7 @@
     position: absolute;
     top: 95px;
     left: 110px;
+
     grid-template-columns: 163px 157px;
     column-gap: 87px;
     padding: 60px 78px 60px 80px;
@@ -27,6 +41,7 @@
 
 .contact__title {
   margin: 0;
+
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -43,6 +58,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
     text-align: right;
   }
 
@@ -54,14 +70,18 @@
 .contact__street,
 .contact__city {
   margin: 0;
+
   line-height: 20px;
   font-style: normal;
 }
 
 .contact__map-wrapper {
   height: 362px;
+
   background-image:
     image-set(
+      url("../../images/map/map-mobile@1x.webp") type("image/webp") 1x,
+      url("../../images/map/map-mobile@2x.webp") type("image/webp") 2x,
       url("../../images/map/map-mobile@1x.jpg") type("image/png") 1x,
       url("../../images/map/map-mobile@2x.jpg") type("image/png") 2x
     );
@@ -71,8 +91,11 @@
 
   @media (min-width: $tablet-width) {
     height: 400px;
+
     background-image:
       image-set(
+        url("../../images/map/map-tablet@1x.webp") type("image/webp") 1x,
+        url("../../images/map/map-tablet@2x.webp") type("image/webp") 2x,
         url("../../images/map/map-tablet@1x.jpg") type("image/png") 1x,
         url("../../images/map/map-tablet@2x.jpg") type("image/png") 2x
       );
@@ -81,6 +104,8 @@
   @media (min-width: $desktop-width) {
     background-image:
       image-set(
+        url("../../images/map/map-desktop@1x.webp") type("image/webp") 1x,
+        url("../../images/map/map-desktop@2x.webp") type("image/webp") 2x,
         url("../../images/map/map-desktop@1x.jpg") type("image/png") 1x,
         url("../../images/map/map-desktop@2x.jpg") type("image/png") 2x
       );

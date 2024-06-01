@@ -39,6 +39,7 @@
 .subscribe__text {
   margin: 0;
   margin-bottom: 24px;
+
   font-size: 16px;
   line-height: 24px;
   text-align: center;
@@ -68,15 +69,34 @@
 .subscribe__input {
   width: 100%;
   padding: 13px;
+
   font-family: $main-font-oswald;
   font-size: 20px;
   line-height: 25px;
   text-transform: uppercase;
+
+  border-radius: 0;
+  outline: 1px solid $border-color-second;
+  outline-offset: -2px;
+  transition: outline 0.3s;
+
+  &:hover {
+    outline: 1px solid $special-grey-first-color;
+  }
+
+  &:focus {
+    outline: 2px solid $grey-text-color;
+  }
+
+  &:user-invalid {
+    outline: 2px solid $error-color;
+  }
 }
 
 .subscribe__button {
   width: 100%;
   padding: 15px 10px;
+
   font-family: $main-font-oswald;
   font-size: 20px;
   line-height: 26px;

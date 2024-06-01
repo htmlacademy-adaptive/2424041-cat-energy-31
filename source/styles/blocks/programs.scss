@@ -18,6 +18,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+
   list-style: none;
 
   @media (min-width: $tablet-width) {
@@ -32,7 +33,9 @@
 
 .programs__item {
   position: relative;
+
   padding: 30px 20px 18px;
+
   background-color: $basic-grey-color;
 
   @media (min-width: $tablet-width) {
@@ -40,8 +43,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 570px;
     padding: 77px 52px 55px;
+    max-width: 570px;
   }
 
   &--weight-loss::before {
@@ -51,6 +54,7 @@
     left: 20px;
     width: 50px;
     height: 53px;
+
     background-image: url("../../icons/stack.svg#weight-loss-icon");
     background-repeat: no-repeat;
     background-size: cover;
@@ -60,17 +64,21 @@
       top: 50%;
       left: auto;
       right: 63px;
-      transform: translateY(-50%);
+
       width: 200px;
       height: 211px;
+
+      transform: translateY(-50%);
     }
 
     @media (min-width: $desktop-width) {
       top: 41px;
       left: 52px;
-      transform: none;
+
       width: 100px;
       height: 106px;
+
+      transform: none;
     }
   }
 
@@ -79,8 +87,10 @@
     position: absolute;
     top: 24px;
     left: 12px;
+
     width: 67px;
     height: 50px;
+
     background-image: url("../../icons/stack.svg#weight-gain-icon");
     background-repeat: no-repeat;
     background-size: cover;
@@ -90,17 +100,21 @@
       top: 52%;
       left: auto;
       right: 28px;
-      transform: translateY(-50%);
+
       width: 268px;
       height: 200px;
+
+      transform: translateY(-50%);
     }
 
     @media (min-width: $desktop-width) {
       top: 47px;
       left: 33px;
-      transform: none;
+
       width: 134px;
       height: 100px;
+
+      transform: none;
     }
   }
 }
@@ -109,6 +123,7 @@
   margin: 0;
   margin-bottom: 29px;
   padding-left: 70px;
+
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
@@ -117,6 +132,7 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 24px;
     padding-left: 0;
+
     font-size: 36px;
     line-height: 36px;
   }
@@ -145,8 +161,10 @@
     position: absolute;
     left: 0;
     bottom: 15px;
+
     width: 100%;
     height: 1px;
+
     background-color: $border-color;
 
     @media (min-width: $tablet-width) {
@@ -158,37 +176,39 @@
 .programs__link {
   position: relative;
   display: inline-block;
-  padding: 4px 47px 4px 0;
+
+  padding: 4px 50px 4px 0;
+
   font-size: 16px;
   line-height: 16px;
   color: $dark-color;
-  text-decoration: none;
   text-transform: uppercase;
+
+  transition: opacity 0.3s;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 25px;
   }
 
-  @media (min-width: $desktop-width) {
-    //
-  }
-
   &::after {
     content: "";
     position: absolute;
     top: 25%;
-    left: calc(100% - 30px);
+    left: calc(100% - 34px);
+
     width: 32px;
     height: 12px;
+
     background-image: url("../../icons/stack.svg#arrow-icon");
     background-repeat: no-repeat;
     background-position: -8px;
     background-size: cover;
+
     transition: background-position 0.3s;
 
     @media (min-width: $tablet-width) {
-      left: calc(100% - 20px);
+      left: calc(100% - 24px);
     }
   }
 
@@ -196,5 +216,15 @@
     &::after {
       background-position: 0;
     }
+  }
+
+  &:focus {
+    &::after {
+      background-position: 0;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

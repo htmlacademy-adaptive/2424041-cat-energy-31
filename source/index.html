@@ -13,13 +13,15 @@
   <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
   <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="preload" as="font" href="fonts/lato/Lato-Regular.woff2">
+  <link rel="preload" as="font" href="fonts/oswald/oswaldregular.woff2">
   <script src="scripts/index.js" defer></script>
 </head>
 
-<body class="page__body page__body--hero">
+<body class="page__body">
   <header class="header">
     <div class="header__container container">
-      <a class="header__logo" href="#">
+      <a class="header__logo link" href="index.html">
         <picture>
           <source media="(min-width: 1440px)" width="70" height="59" type="image/svg+xml"
             srcset="images/logo/logo-desktop.svg">
@@ -32,50 +34,58 @@
           alt="Словесный логотип сайта Cat Enegry.">
       </a>
 
-      <nav class="nav nav--opened">
-        <button class="nav__burger" type="button">
+      <nav class="nav nav--opened nav--no-js">
+        <button class="nav__burger nav__burger--active" type="button">
           <span class="visually-hidden">Открыть меню</span>
           <span class="nav__burger-line"></span>
         </button>
         <ul class="nav__list nav__list--has-background">
           <li class="nav__item">
-            <a class="nav__link nav__link--curent" href="#">Главная</a>
+            <a class="nav__link nav__link--curent link" href="#">Главная</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="catalog.html">Каталог продукции</a>
+            <a class="nav__link link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">Подбор программы</a>
+            <a class="nav__link link" href="programs.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="main-page">
+  <main class="page__main">
+    <h1 class="visually-hidden">Сайт по продаже функционального питания для котов.</h1>
+
     <section class="hero">
       <div class="hero__container container">
-        <h1 class="visually-hidden">Сайт по продаже функционального питания для котов.</h1>
-        <div class="hero__content">
-          <h2 class="hero__title main-title">Функциональное <br> питание для котов</h2>
-          <p class="hero__text">Занялся собой? Займись котом!</p>
-          <a class="hero__link button" href="#">Подобрать программу</a>
+        <h2 class="hero__title main-title">Функциональное питание для котов</h2>
+        <p class="hero__text">Занялся собой? Займись котом!</p>
+        <a class="hero__link link button" href="programs.html">Подобрать программу</a>
+        <div class="hero__img-wrapper">
+          <picture>
+            <source media="(min-width: 1440px)" width="552" height="499" type="image/webp"
+              srcset="images/hero/hero-product-desktop@1x.webp 1x, images/hero/hero-product-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" width="709" height="609" type="image/webp"
+              srcset="images/hero/hero-product-tablet@1x.webp 1x, images/hero/hero-product-tablet@2x.webp 2x">
+            <source type="image/webp"
+              srcset="images/hero/hero-product-mobile@1x.webp 1x, images/hero/hero-product-mobile@2x.webp 2x">
+            <source media="(min-width: 1440px)" width="552" height="499" type="image/png"
+              srcset="images/hero/hero-product-desktop@1x.png 1x, images/hero/hero-product-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" width="709" height="609" type="image/png"
+              srcset="images/hero/hero-product-tablet@1x.png 1x, images/hero/hero-product-tablet@2x.png 2x">
+            <img class="hero__img" src="images/hero/hero-product-mobile@1x.png"
+              srcset="images/hero/hero-product-mobile@2x.png 2x" width="280" height="270"
+              alt="Изображение функционального питания для котов со вкусом курицы.">
+          </picture>
         </div>
-        <picture>
-          <source media="(min-width: 1440px)" width="552" height="499" type="image/png"
-            srcset="images/hero/hero-product-desktop@1x.png 1x, images/hero/hero-product-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" width="709" height="609" type="image/png"
-            srcset="images/hero/hero-product-tablet@1x.png 1x, images/hero/hero-product-tablet@2x.png 2x">
-          <img class="hero__img" src="images/hero/hero-product-mobile@1x.png"
-            srcset="images/hero/hero-product-mobile@2x.png 2x" width="280" height="270"
-            alt="Изображение функционального питания для котов со вкусом курицы.">
-        </picture>
       </div>
     </section>
 
     <section class="programs">
       <div class="container">
         <h2 class="visually-hidden">Наши программы</h2>
+
         <ul class="programs__list">
           <li class="programs__item programs__item--weight-loss">
             <h3 class="programs__title">Похудение</h3>
@@ -84,7 +94,7 @@
               лазить по деревьям? Пора на диету! Cat Energy Slim поможет
               вашему питомцу сбросить лишний вес.
             </p>
-            <a class="programs__link" href="#">Каталог slim</a>
+            <a class="programs__link link" href="catalog-slim.html">Каталог slim</a>
           </li>
           <li class="programs__item programs__item--weight-gain">
             <h3 class="programs__title">Набор массы</h3>
@@ -93,7 +103,7 @@
               Серия Cat Energy Pro поможет вашему коту нарастить
               необходимые мышцы!
             </p>
-            <a class="programs__link" href="#">Каталог pro</a>
+            <a class="programs__link link" href="catalog-pro.hrml">Каталог pro</a>
           </li>
         </ul>
       </div>
@@ -102,6 +112,7 @@
     <section class="process">
       <div class="container">
         <h2 class="process__title main-title">Как это работает</h2>
+
         <ul class="process__list">
           <li class="process__item process__item--compound">
             <p class="process__text main-text">
@@ -139,6 +150,7 @@
       <div class="example__container container">
         <div class="example__content">
           <h2 class="example__title main-title">Живой пример</h2>
+
           <p class="example__text main-text">
             Борис сбросил 5 кг за 2 месяца, просто заменив свой
             обычный корм на Cat Energy Slim. Отличный результат
@@ -160,20 +172,28 @@
             <span class="example__cost-price">15&nbsp;000 руб.</span>
           </div>
         </div>
+
         <div class="example__result slider" style="--curtain-place: 0.5;">
           <picture>
+            <source media="(min-width: 768px)" width="560" height="512" type="image/webp"
+              srcset="images/slider/result-before-tablet-desktop@1x.webp 1x, images/slider/result-before-tablet-desktop@2x.webp 2x">
+            <source type="image/webp"
+              srcset="images/slider/result-before-mobile@1x.webp 1x, images/slider/result-before-mobile@2x.webp 2x">
             <source media="(min-width: 768px)" width="560" height="512" type="image/png"
               srcset="images/slider/result-before-tablet-desktop@1x.png 1x, images/slider/result-before-tablet-desktop@2x.png 2x">
             <img class="example__result-img example__result-img--before" src="images/slider/result-before-mobile@1x.png"
               srcset="images/slider/result-before-mobile@2x.png 2x" width="280" height="256" alt="Результат до.">
           </picture>
-          <button class="example__result-divider slider__divider" type="button">
-            <span class="visually-hidden">Слайдер результата до и после</span>
-            <svg class="example__result-slider-icon" width="24" height="28">
-              <use href="../../icons/stack.svg#slider-icon"></use>
-            </svg>
-          </button>
+          <div class="example__result-divider slider__divider">
+            <button class="example__result-divider-button slider__divider-button" type="button">
+              <span class="visually-hidden">Слайдер результата до и после</span>
+            </button>
+          </div>
           <picture>
+            <source media="(min-width: 768px)" width="560" height="512" type="image/webp"
+              srcset="images/slider/result-after-tablet-desktop@1x.webp 1x, images/slider/result-after-tablet-desktop@2x.webp 2x">
+            <source type="image/webp"
+              srcset="images/slider/result-after-mobile@1x.webp 1x, images/slider/result-after-mobile@2x.webp 2x">
             <source media="(min-width: 768px)" width="560" height="512" type="image/png"
               srcset="images/slider/result-after-tablet-desktop@1x.png 1x, images/slider/result-after-tablet-desktop@2x.png 2x">
             <img class="example__result-img example__result-img--after" src="images/slider/result-after-mobile@1x.png"
@@ -186,6 +206,7 @@
     <section class="contact">
       <div class="contact__container container">
         <h2 class="visually-hidden">Наш адрес</h2>
+
         <div class="contact__content">
           <h3 class="contact__title">
             Приглашаем
@@ -203,6 +224,7 @@
           </address>
         </div>
       </div>
+
       <div class="contact__map-wrapper">
         <script async
           src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7c726cf5da68c88d5fe57c1114a2b63325893433a9f94aaefe97ffcf0dd673b6&amp;lang=ru_RU&amp;scroll=true"></script>
@@ -238,7 +260,7 @@
         </li>
       </ul>
 
-      <a class="footer__academy-logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"
+      <a class="footer__academy-logo link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"
         rel="noreferrer noopener">
         <span class="footer__academy-logo-text">
           HTML Academy

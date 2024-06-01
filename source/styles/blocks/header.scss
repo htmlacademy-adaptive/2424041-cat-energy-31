@@ -1,6 +1,7 @@
 .header {
   position: relative;
-  padding: 13px 0 15px;
+
+  padding: 13px 0 14px;
 
   @media (min-width: $tablet-width) {
     padding: 25px 0 0;
@@ -13,6 +14,8 @@
 
 .header__container {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 15px;
   justify-content: space-between;
   align-items: center;
 }
@@ -21,12 +24,27 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 13px;
-  min-width: 190px;
-  text-decoration: none;
+  width: 100%;
+  max-width: 190px;
+
+  transition: opacity 0.3s;
 
   @media (min-width: $tablet-width) {
     justify-content: flex-start;
+    gap: 13px;
+    max-width: 220px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 

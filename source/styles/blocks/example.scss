@@ -1,9 +1,11 @@
 .example {
   padding: 25px 0 40px;
+
   background: $special-grey-third-color;
 
   @media (min-width: $tablet-width) {
     padding: 45px 0 100px;
+
     background: linear-gradient(to top, $special-grey-third-color 462px, $white-color 462px);
   }
 
@@ -84,6 +86,7 @@
   margin: 0;
   margin-bottom: 29px;
   padding: 0;
+
   list-style: none;
 
   @media (min-width: $tablet-width) {
@@ -100,11 +103,14 @@
 
 .example__item {
   position: relative;
+
   justify-self: center;
   padding: 15px;
   width: 100%;
   max-width: 124px;
+
   text-align: center;
+
   border: 1px solid $special-grey-first-color;
   border-radius: 3px;
 
@@ -112,6 +118,7 @@
     margin-bottom: 3px;
     padding: 14px 15px 20px;
     max-width: 162px;
+
     font-size: 30px;
     line-height: 37px;
   }
@@ -133,18 +140,23 @@
   top: calc(100% - 8px);
   left: 50%;
   transform: translateX(-50%);
+
+  padding: 0 5px;
   width: 100%;
   max-width: 87px;
   height: 30px;
-  padding: 0 5px;
-  background-color: $special-grey-third-color;
+
   font-size: 12px;
   line-height: 12px;
 
+  background-color: $special-grey-third-color;
+
   @media (min-width: $tablet-width) {
     max-width: 142px;
+
     font-size: 14px;
     line-height: 14px;
+
     background-color: $white-color;
   }
 
@@ -168,6 +180,7 @@
 .example__row {
   grid-column: 1 / -1;
   grid-row: 4 / 5;
+
   text-align: center;
 
   @media (min-width: $tablet-width) {
@@ -176,6 +189,7 @@
     place-self: center end;
     margin-bottom: 0;
     max-width: 200px;
+
     text-align: right;
   }
 
@@ -192,7 +206,9 @@
 
 .example__result {
   --curtain-place: 0.5;
+
   position: relative;
+
   grid-column: 1 / -1;
   grid-row: 5 / 6;
   display: grid;
@@ -229,27 +245,59 @@
 }
 
 .example__result-divider {
-  align-self: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: -20px;
+  z-index: 1;
+
+  display: grid;
+  place-items: center;
+  margin: 0 -2px;
+  width: 4px;
+  height: 100%;
+
+  color: $icons-color;
+
+  border-radius: 2px;
+  background-color: currentColor;
+  cursor: col-resize;
+  transition: color 0.3s, opacity 0.3s;
+
+  &:hover {
+    color: $basic-green-color;
+  }
+
+  &:focus {
+    color: $basic-green-color;
+  }
+
+  &:active {
+    color: $hover-green-color;
+    opacity: 0.6;
+  }
+}
+
+.example__result-divider-button {
+  box-sizing: border-box;
+  display: grid;
+  margin: -18px;
   padding: 0;
   width: 40px;
   height: 40px;
-  z-index: 1;
-  border: 2px solid $icons-color;
-  cursor: pointer;
-  border-radius: 50%;
+
+  color: inherit;
+
   background-color: $white-color;
+  border: 2px solid currentColor;
+  border-radius: 20px;
+  cursor: col-resize;
 
   &::before {
     content: "";
-    position: absolute;
-    z-index: -1;
-    width: 4px;
+    width: 100%;
     height: 100%;
-    background-color: $icons-color;
-    border-radius: 2px;
+
+    background-color: currentColor;
+    mask-image: url("../../icons/stack.svg#slider-icon");
+    mask-size: 24px 18px;
+    mask-repeat: no-repeat;
+    mask-position: center;
   }
 }
