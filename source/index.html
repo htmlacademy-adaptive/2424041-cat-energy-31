@@ -12,14 +12,14 @@
   <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
   <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
   <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/styles.css">
-  <link rel="preload" as="font" href="fonts/lato/Lato-Regular.woff2">
-  <link rel="preload" as="font" href="fonts/oswald/oswaldregular.woff2">
   <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
-  <header class="header">
+  <header class="header" data-test="header">
     <div class="header__container container">
       <a class="header__logo link" href="index.html">
         <picture>
@@ -34,7 +34,7 @@
           alt="Словесный логотип сайта Cat Enegry.">
       </a>
 
-      <nav class="nav nav--opened nav--no-js">
+      <nav class="nav nav--closed nav--no-js">
         <button class="nav__burger nav__burger--active" type="button">
           <span class="visually-hidden">Открыть меню</span>
           <span class="nav__burger-line"></span>
@@ -57,7 +57,7 @@
   <main class="page__main">
     <h1 class="visually-hidden">Сайт по продаже функционального питания для котов.</h1>
 
-    <section class="hero">
+    <section class="hero" data-test="hero">
       <div class="hero__container container">
         <h2 class="hero__title main-title">Функциональное питание для котов</h2>
         <p class="hero__text">Занялся собой? Займись котом!</p>
@@ -82,7 +82,7 @@
       </div>
     </section>
 
-    <section class="programs">
+    <section class="programs" data-test="programs">
       <div class="container">
         <h2 class="visually-hidden">Наши программы</h2>
 
@@ -109,7 +109,7 @@
       </div>
     </section>
 
-    <section class="process">
+    <section class="process" data-test="features">
       <div class="container">
         <h2 class="process__title main-title">Как это работает</h2>
 
@@ -146,7 +146,7 @@
       </div>
     </section>
 
-    <section class="example">
+    <section class="example" data-test="proof">
       <div class="example__container container">
         <div class="example__content">
           <h2 class="example__title main-title">Живой пример</h2>
@@ -182,7 +182,8 @@
             <source media="(min-width: 768px)" width="560" height="512" type="image/png"
               srcset="images/slider/result-before-tablet-desktop@1x.png 1x, images/slider/result-before-tablet-desktop@2x.png 2x">
             <img class="example__result-img example__result-img--before" src="images/slider/result-before-mobile@1x.png"
-              srcset="images/slider/result-before-mobile@2x.png 2x" width="280" height="256" alt="Результат до.">
+              srcset="images/slider/result-before-mobile@2x.png 2x" width="280" height="256" loading="lazy"
+              alt="Результат до.">
           </picture>
           <div class="example__result-divider slider__divider">
             <button class="example__result-divider-button slider__divider-button" type="button">
@@ -197,13 +198,14 @@
             <source media="(min-width: 768px)" width="560" height="512" type="image/png"
               srcset="images/slider/result-after-tablet-desktop@1x.png 1x, images/slider/result-after-tablet-desktop@2x.png 2x">
             <img class="example__result-img example__result-img--after" src="images/slider/result-after-mobile@1x.png"
-              srcset="images/slider/result-after-mobile@2x.png 2x" width="280" height="256" alt="Результат после.">
+              srcset="images/slider/result-after-mobile@2x.png 2x" width="280" height="256" loading="lazy"
+              alt="Результат после.">
           </picture>
         </div>
       </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" data-test="contacts">
       <div class="contact__container container">
         <h2 class="visually-hidden">Наш адрес</h2>
 
@@ -232,7 +234,7 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer" data-test="footer">
     <div class="footer__container container">
       <a class="footer__logo" href="index.html">
         <img class="logo-text" src="images/logo/logo-footer.svg" width="128" height="24"

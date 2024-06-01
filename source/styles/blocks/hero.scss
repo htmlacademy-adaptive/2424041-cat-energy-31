@@ -1,7 +1,11 @@
 .hero {
+  position: relative;
+
   padding-top: 27px;
 
   @media (min-width: $tablet-width) {
+    position: static;
+
     padding-top: 63px;
   }
 
@@ -13,7 +17,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 66px;
+    top: 0;
     left: 0;
     right: 0;
     z-index: -1;
