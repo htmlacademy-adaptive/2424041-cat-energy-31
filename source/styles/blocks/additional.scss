@@ -1,0 +1,120 @@
+.additional {
+  overflow: hidden;
+}
+
+.additional__title {
+  margin: 0;
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 80px;
+  }
+}
+
+.additional__content {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+  }
+}
+
+.additional__list {
+  margin: 0;
+  margin-bottom: 35px;
+  padding: 0;
+
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    width: 100%;
+  }
+}
+
+.additional__item {
+  padding: 12px 0 19px;
+
+  border-top: 1px solid $basic-grey-color;
+
+  @media (min-width: $tablet-width) {
+    padding: 26px 38px 28px;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    gap: 24px 20px;
+
+    border: 1px solid $basic-grey-color;
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 15px 0;
+    grid-template-columns: 1fr 1fr max-content;
+    column-gap: 40px;
+    align-items: center;
+
+    border-left: none;
+    border-right: none;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid $basic-grey-color;
+  }
+}
+
+.additional__item-title {
+  margin: 0;
+  margin-bottom: 13px;
+
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $grey-text-second-color;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.additional__properties {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    gap: 49px;
+    margin-bottom: 0;
+  }
+}
+
+.additional__quantity,
+.additional__price {
+  line-height: 14px;
+  color: $grey-text-color;
+
+  @media (min-width: $tablet-width) {
+    line-height: 20px;
+  }
+}
+
+.additional__link {
+  display: block;
+  grid-column: 1 / -1;
+
+  text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    min-width: 245px;
+    grid-column: auto;
+  }
+}

@@ -1,0 +1,11 @@
+.link {
+  text-decoration: none;
+
+  &:not([href]) {
+    background-color: $basic-grey-color;
+  }
+
+  &:not([href]):hover {
+    color: $white-color;
+  }
+}

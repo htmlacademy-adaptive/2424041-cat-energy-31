@@ -1,0 +1,119 @@
+.process {
+  padding-bottom: 50px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 47px;
+    border-bottom: 1px solid $basic-grey-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 69px;
+    border-bottom: none;
+  }
+}
+
+.process__title {
+  margin: 0;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
+  }
+}
+
+.process__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  counter-reset: number 0;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 37px 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+  }
+}
+
+.process__item {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  counter-increment: number 1;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 31px;
+    padding-top: 40px;
+    min-height: 280px;
+
+    &::after {
+      content: counter(number);
+      position: absolute;
+      top: 0;
+      left: 115px;
+      z-index: -1;
+
+      font-size: 280px;
+      line-height: 280px;
+      color: $basic-grey-color;
+    }
+  }
+
+  &--compound::before,
+  &--form::before,
+  &--meal::before,
+  &--time::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+
+    background-color: $basic-green-color;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 80px;
+
+      background-size: 28px;
+    }
+  }
+
+  &--compound::before {
+    background-image: url("../../icons/stack.svg#process-compound-icon");
+  }
+
+  &--form::before {
+    background-image: url("../../icons/stack.svg#process-form-icon");
+  }
+
+  &--meal::before {
+    background-image: url("../../icons/stack.svg#process-meal-icon");
+  }
+
+  &--time::before {
+    background-image: url("../../icons/stack.svg#process-time-icon");
+  }
+}
+
+.process__text {
+  margin: 0;
+  max-width: 200px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 245px;
+  }
+}
