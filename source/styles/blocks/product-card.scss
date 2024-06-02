@@ -6,6 +6,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content auto 18px min-content;
   padding: 20px 20px 25px;
+  height: 100%;
 
   @media (min-width: $tablet-width) {
     --pseudo-margin: 50px;

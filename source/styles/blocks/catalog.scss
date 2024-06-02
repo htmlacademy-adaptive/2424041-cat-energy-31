@@ -1,8 +1,12 @@
 .catalog {
   padding: 27px 0 23px;
 
+  border-top: 1px solid $border-color;
+
   @media (min-width: $tablet-width) {
     padding: 65px 0 74px;
+
+    border-top: none;
   }
 
   @media (min-width: $desktop-width) {

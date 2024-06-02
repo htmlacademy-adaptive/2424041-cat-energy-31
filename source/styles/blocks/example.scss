@@ -11,6 +11,8 @@
 
   @media (min-width: $desktop-width) {
     padding: 0 0 70px;
+
+    background: linear-gradient(to bottom, $white-color 136px, $special-grey-third-color 136px);
   }
 }
 
